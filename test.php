@@ -1,0 +1,1 @@
+<?php echo $this->getSkinUrl('images/sfeerimpressie/jscolor/cross.gif'); ?>

@@ -1,0 +1,20 @@
+Om de sfeerimpressie te installeren:
+
+Stap 1.
+Bewerk de view.phtml  (/app/design/frontend/default/buyshop/template/catalog/product/view.phtml) 
+En voeg dit toe op regel 266:
+
+<!-- SFEERIMPRESSIE door Frans Tuinstra 2013/2014 REGEL 266 -->
+<div class="sfeerimpressie">
+    <?php session_start();
+        $SfeerimpressieImage = ($_product->getMediaConfig()->getMediaUrl($_product->getData('image')));
+        $_SESSION['SfeerimpressieImage'] = $SfeerimpressieImage ?>
+        <a href="<?php echo Sfeerimpressie ?>"><?php echo $this->__(‘Sfeerimpressie’) ?></a>
+</div>
+
+Stap 2.
+index.phtml gaat naar /app/design/frontend/default/buyshop/template/sfeerimpressie/
+
+plaatjes gaan naar /skin/frontend/base/default/images/sfeerimpressie/
+- /images/ voor alle plaatjes
+- /jscolor/ voor de kleuerenpalette
